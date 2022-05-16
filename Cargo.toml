@@ -6,7 +6,7 @@ description = "Shows the contents of a Text File in the terminal"
 readme = "README.md"
 repository = "https://github.com/Trequa/stf"
 license = " GPL-3.0-only"
-keywords = ["cli", "show", "display", "file", "files", "util", "utils"]
+keywords = ["cli", "show", "display", "file", "util"]
 categories = ["command-line-utilities"]
 
 [dependencies]
