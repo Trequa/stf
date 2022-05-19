@@ -43,8 +43,8 @@ fn get_file(path: String) -> File {
 
 fn print_line(line_number: u16, line: String, print_line_number: bool, print_whitespace: bool) {
 	let line_to_print = if print_whitespace {
-		line.replace(" ", "\x1b[38;5;240m•\x1b[0m")
-			.replace("\t", "\x1b[38;5;240m>\x1b[0m\t")
+		line.replace(' ', "\x1b[38;5;240m•\x1b[0m")
+			.replace('\t', "\x1b[38;5;240m>\x1b[0m\t")
 	} else {
 		line
 	};
