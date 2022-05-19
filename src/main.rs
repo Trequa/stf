@@ -1,11 +1,6 @@
 use clap::Parser;
 use std::fs::File;
-use std::io::{
-	BufRead,
-	BufReader,
-	ErrorKind,
-	Result
-};
+use std::io::{BufRead, BufReader, ErrorKind, Result};
 use std::path::Path;
 
 #[derive(Parser)]
@@ -48,12 +43,11 @@ fn get_file(path: String) -> File {
 
 fn print_line(line_number: u16, line: String, print_line_number: bool, print_whitespace: bool) {
 	let line_to_print = if print_whitespace {
-		line
-			.replace(" ", "\x1b[38;5;240m•\x1b[0m")
+		line.replace(" ", "\x1b[38;5;240m•\x1b[0m")
 			.replace("\t", "\x1b[38;5;240m>\x1b[0m\t")
-		} else {
-			line
-		};
+	} else {
+		line
+	};
 
 	if print_line_number {
 		println!("\x1b[38;5;241m{:>3}\x1b[0m {}", line_number, line_to_print);
