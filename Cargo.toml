@@ -1,6 +1,6 @@
 [package]
 name = "stf"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Shows the contents of a Text File in the terminal"
 readme = "README.md"
@@ -8,6 +8,7 @@ repository = "https://github.com/Trequa/stf"
 license = " GPL-3.0-only"
 keywords = ["cli", "show", "display", "file", "util"]
 categories = ["command-line-utilities"]
+exclude = [".github/", "doc/"]
 
 [dependencies]
 clap = { version = "3.1.8", features = ["derive"] }
